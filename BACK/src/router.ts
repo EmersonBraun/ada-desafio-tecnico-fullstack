@@ -10,7 +10,7 @@ export default (app: Express) => {
 
     app.use('/', [
         authRoutes(router),
-        cardsRoutes(router, app),
+        cardsRoutes(router),
     ])
 
     handleErrors(app)
