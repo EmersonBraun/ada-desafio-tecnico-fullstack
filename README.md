@@ -3,10 +3,38 @@
 ## Get started
 
 ### Backend
-1 - copy .env.example  
+1 - enter in folder  
+`cd BACK/`  
+2 - copy .env.example  
 `cp .env.example .env`  
-2 - start docker  
+3 - start docker  
 `docker-compose up -d `  
+4 - get current version of node
+`nvm install 18`  
+`nvm use`  
+5 - install dependences  
+`yarn install `  
+6 - run application   
+`yarn run dev `
+
+#### Scripts
+- Run in Dev environment: `yarn run dev`  
+- Run in Prod environment: `yarn run prod`  
+- Run built application: `yarn run start`  
+- Up container: `yarn run up`  
+- Down container: `yarn run down`  
+- Run lint: `yarn run lint`
+- Run all tests: `yarn run test`
+- Run all tests (watch mode): `yarn run test:watch`
+- Run test coverage: `yarn run test:cov`
+- Run unit tests: `yarn run test:unit`
+- Run integration tests: `yarn run test:integration`
+
+### Frontend
+1 - enter in folder  
+`cd FRONT/`  
+2 - copy .env.example  
+`cp .env.example .env`  
 3 - get current version of node
 `nvm install 18`  
 `nvm use`  
@@ -14,3 +42,12 @@
 `yarn install `  
 5 - run application   
 `yarn run dev `
+
+#### Scripts
+- Run in Dev environment: `yarn run dev`  
+- Run in Prod environment: `yarn run prod`  
+- Run built application: `yarn run start`  
+- Run lint: `yarn run lint`
+- Run all tests: `yarn run test`
+- Run all tests (watch mode): `yarn run test:watch`
+- Run test coverage: `yarn run test:cov`
