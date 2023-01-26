@@ -2,9 +2,9 @@ import { AppMessages } from '../../../sharred/consts/AppMessages'
 
 import { HttpRequest, HttpResponse } from '../../../sharred/protocols'
 import {
-    badRequest,
     ok,
     serverError,
+    unauthorized,
 } from '../../../sharred/services/http-helper'
 import logger from '../../../sharred/services/logger'
 import {
@@ -19,7 +19,7 @@ export async function login({ body }: HttpRequest): Promise<HttpResponse> {
     )) as boolean | null
     if (!passwordIsValid) {
         logger.error(AppMessages.InvalidLogin)
-        return badRequest(AppMessages.InvalidLogin)
+        return unauthorized(AppMessages.InvalidLogin)
     }
 
     try {
