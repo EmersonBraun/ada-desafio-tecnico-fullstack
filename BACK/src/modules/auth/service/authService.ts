@@ -18,7 +18,7 @@ export async function verifyPassword(
     login: string
 ): Promise<boolean | null> {
     try {
-        const { DEFAULT_LOGIN, DEFAULT_PASSWORD } = process.env;
+        const { DEFAULT_LOGIN, DEFAULT_PASSWORD } = process.env
         return login === DEFAULT_LOGIN && senha === DEFAULT_PASSWORD
     } catch (error) {
         console.error(error)
