@@ -1,27 +1,29 @@
 import styled from "styled-components";
 
-const Container = styled.div`
-  padding: 10px;
-  border-right: 1px solid silver;
+export const Container = styled.div`
   display: flex;
   flex-direction: column;
+  width: 96%;
+  padding: 10px;
+  margin: 8px;
   align-items: center;
-  width: 100%;
+  border: 1px solid ${(props) => props.theme["gray-400"]};
 `;
 
-const UL = styled.ul`
+export const UL = styled.ul`
   width: 100%;
+  gap: 12px;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
 `;
 
-const Title = styled.h3`
+export const Title = styled.h3`
   padding: 10px;
-  border-bottom: 1px solid silver;
+  border-bottom: 1px solid ${(props) => props.theme["gray-400"]};
   width: 100%;
   text-align: center;
-  margin-bottom: 5px;
-`;
 
-export { Container, UL, Title };
+  margin-bottom: 5px;
+  color: ${(props) => props.theme["yellow-500"]};
+`;

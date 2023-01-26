@@ -7,10 +7,10 @@ import {
   FaBan,
 } from "react-icons/fa";
 import { UpdateCardData } from "../../types";
-import * as Styled from "./styles";
 import { DISPLAY_MODE, STATUS_LABELS } from "../../constants";
-import CardHeader from "./CardHeader";
-import CardContent from "./CardContent";
+import { CardHeader } from "./CardHeader";
+import { CardContent } from "./CardContent";
+import { Container, Header, ButtonsContainer, ClickableIcon } from "./styles";
 
 interface CardProps {
   data: UpdateCardData;
@@ -18,7 +18,7 @@ interface CardProps {
   onHandleDelete: (card: UpdateCardData) => void;
 }
 
-const Card = ({ data, onHandleUpdate, onHandleDelete }: CardProps) => {
+export const Card = ({ data, onHandleUpdate, onHandleDelete }: CardProps) => {
   const { id, titulo, conteudo, lista } = data;
   const [viewMode, setViewMode] = useState(DISPLAY_MODE);
   const [changedTitle, setChangedTitle] = useState(titulo);
@@ -67,8 +67,8 @@ const Card = ({ data, onHandleUpdate, onHandleDelete }: CardProps) => {
   };
 
   return (
-    <Styled.Container>
-      <Styled.Header>
+    <Container>
+      <Header>
         <CardHeader
           isDisplayMode={isDisplayMode}
           titulo={titulo}
@@ -76,45 +76,43 @@ const Card = ({ data, onHandleUpdate, onHandleDelete }: CardProps) => {
           changedTitle={changedTitle}
           setChangedTitle={setChangedTitle}
         />
-      </Styled.Header>
+      </Header>
       <CardContent
         isDisplayMode={isDisplayMode}
         conteudo={conteudo}
         setEditedContent={setEditedContent}
         changedContent={changedContent}
       />
-      <Styled.ButtonsContainer>
+      <ButtonsContainer>
         {isDisplayMode ? (
           <>
-            <Styled.ClickableIcon
+            <ClickableIcon
               disabled={!hasBackward}
               onClick={() => onHandleUpdate(changeToBackwardList())}
             >
-              <FaChevronCircleLeft size={20} />
-            </Styled.ClickableIcon>
-            <Styled.ClickableIcon onClick={() => onHandleDelete(data)}>
-              <FaTrash size={20} />
-            </Styled.ClickableIcon>
-            <Styled.ClickableIcon
+              <FaChevronCircleLeft className="FaLeftIcon" size={20} />
+            </ClickableIcon>
+            <ClickableIcon onClick={() => onHandleDelete(data)}>
+              <FaTrash className="FaTrashIcon" size={20} />
+            </ClickableIcon>
+            <ClickableIcon
               disabled={!hasFoward}
               onClick={() => onHandleUpdate(changeToNextList())}
             >
-              <FaChevronCircleRight size={20} />
-            </Styled.ClickableIcon>
+              <FaChevronCircleRight className="FaRightIcon" size={20} />
+            </ClickableIcon>
           </>
         ) : (
           <>
-            <Styled.ClickableIcon onClick={handleCancel}>
-              <FaBan size={20} />
-            </Styled.ClickableIcon>
-            <Styled.ClickableIcon onClick={handleSave}>
-              <FaSave size={20} />
-            </Styled.ClickableIcon>
+            <ClickableIcon onClick={handleCancel}>
+              <FaBan className="FaBanIcon" size={20} />
+            </ClickableIcon>
+            <ClickableIcon onClick={handleSave}>
+              <FaSave className="FaSaveIcon" size={20} />
+            </ClickableIcon>
           </>
         )}
-      </Styled.ButtonsContainer>
-    </Styled.Container>
+      </ButtonsContainer>
+    </Container>
   );
 };
-
-export default Card;

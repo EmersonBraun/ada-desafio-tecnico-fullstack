@@ -4,14 +4,14 @@ import { toast } from "react-toastify";
 import { MESSAGES, STATUS_LABELS } from "../../constants";
 import { CardData } from "../../types";
 import Input from "../Input";
-import TextArea from "../TextArea";
-import * as Styled from "./styles";
+import { TextArea } from "../TextArea";
+import { Container, ButtonsContainer, ClickableIcon } from "./styles";
 
 interface NewCardProps {
   onHandleAddCard: (card: CardData) => void;
 }
 
-const NewCard = ({ onHandleAddCard }: NewCardProps) => {
+export const NewCard = ({ onHandleAddCard }: NewCardProps) => {
   const [titulo, setTitulo] = useState("");
   const [conteudo, setConteudo] = useState("");
 
@@ -35,28 +35,22 @@ const NewCard = ({ onHandleAddCard }: NewCardProps) => {
   };
 
   return (
-    <Styled.Container>
-      <Styled.Header>
-        <Input
-          value={titulo}
-          placeholder="Título"
-          onChange={(evt) => setTitulo(evt.target.value)}
-        />
-      </Styled.Header>
-      <Styled.EditContent>
-        <TextArea
-          value={conteudo}
-          placeholder="Conteúdo"
-          onChange={(e) => setConteudo(e.target.value)}
-        />
-      </Styled.EditContent>
-      <Styled.ButtonsContainer>
-        <Styled.ClickableIcon onClick={adicionar}>
-          <FaPlusCircle size={20} />
-        </Styled.ClickableIcon>
-      </Styled.ButtonsContainer>
-    </Styled.Container>
+    <Container>
+      <Input
+        value={titulo}
+        placeholder="Título"
+        onChange={(evt) => setTitulo(evt.target.value)}
+      />
+      <TextArea
+        value={conteudo}
+        placeholder="Conteúdo"
+        onChange={(e) => setConteudo(e.target.value)}
+      />
+      <ButtonsContainer>
+        <ClickableIcon onClick={adicionar}>
+          <FaPlusCircle size={22} />
+        </ClickableIcon>
+      </ButtonsContainer>
+    </Container>
   );
 };
-
-export default NewCard;

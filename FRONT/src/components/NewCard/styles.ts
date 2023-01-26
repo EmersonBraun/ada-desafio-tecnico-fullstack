@@ -1,38 +1,27 @@
 import styled from "styled-components";
 
-const Container = styled.li`
-  min-width: 200px;
-  padding: 10px;
-  list-style: none;
-  margin: 5px;
-  background-color: white;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  height: 15rem;
-`;
-
-const Header = styled.div`
-  width: 100%;
+export const Container = styled.li`
   display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid silver;
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  border-radius: 8px;
+  background: ${(props) => props.theme["gray-700"]};
 `;
-
-const ButtonsContainer = styled.div`
+export const ButtonsContainer = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 10px;
+  color: ${(props) => props.theme["green-700"]};
+
+  &:hover {
+    color: ${(props) => props.theme["green-500"]};
+  }
 `;
 
-const EditContent = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
-const ClickableIcon = styled.span`
+export const ClickableIcon = styled.span`
   cursor: pointer;
 `;
-
-export { Container, Header, ButtonsContainer, EditContent, ClickableIcon };

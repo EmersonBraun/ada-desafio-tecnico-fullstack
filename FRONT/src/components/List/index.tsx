@@ -1,17 +1,15 @@
-import * as Styled from "./styles";
+import { Container, Title, UL } from "./styles";
 
 interface ListProps {
   status: string;
   children: React.ReactNode;
 }
 
-const List = ({ status, children }: ListProps) => {
+export const List = ({ status, children }: ListProps) => {
   return (
-    <Styled.Container>
-      <Styled.Title>{status}</Styled.Title>
-      <Styled.UL>{children}</Styled.UL>
-    </Styled.Container>
+    <Container>
+      <Title>{status}</Title>
+      <UL>{children}</UL>
+    </Container>
   );
 };
-
-export default List;

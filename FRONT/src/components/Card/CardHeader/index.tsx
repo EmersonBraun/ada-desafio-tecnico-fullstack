@@ -1,7 +1,7 @@
 import { FaEdit } from "react-icons/fa";
 import { EDIT_MODE } from "../../../constants";
 import Input from "../../Input";
-import * as Styled from "./styles";
+import { Title, ClickableIcon } from "../styles";
 
 interface CardHeaderProps {
   isDisplayMode: boolean;
@@ -11,7 +11,7 @@ interface CardHeaderProps {
   setChangedTitle: (title: string) => void;
 }
 
-const CardHeader = ({
+export const CardHeader = ({
   isDisplayMode,
   titulo,
   setViewMode,
@@ -20,10 +20,10 @@ const CardHeader = ({
 }: CardHeaderProps) => {
   return isDisplayMode ? (
     <>
-      <Styled.Title>{titulo}</Styled.Title>
-      <Styled.ClickableIcon onClick={() => setViewMode(EDIT_MODE)}>
+      <Title>{titulo}</Title>
+      <ClickableIcon onClick={() => setViewMode(EDIT_MODE)}>
         <FaEdit size={20} />
-      </Styled.ClickableIcon>
+      </ClickableIcon>
     </>
   ) : (
     <Input
@@ -33,5 +33,3 @@ const CardHeader = ({
     />
   );
 };
-
-export default CardHeader;

@@ -1,6 +1,6 @@
 import ReactMarkdown from "react-markdown";
-import * as Styled from "./styles";
-import TextArea from "../../TextArea";
+import { TextArea } from "../../TextArea";
+import { Content } from "../styles";
 
 interface CardContentProps {
   isDisplayMode: boolean;
@@ -9,24 +9,20 @@ interface CardContentProps {
   changedContent: string;
 }
 
-const CardContent = ({
+export const CardContent = ({
   isDisplayMode,
   conteudo,
   setEditedContent,
   changedContent,
 }: CardContentProps) => {
   return isDisplayMode ? (
-    <Styled.Content>
+    <Content>
       <ReactMarkdown>{conteudo}</ReactMarkdown>
-    </Styled.Content>
+    </Content>
   ) : (
-    <Styled.EditContent>
-      <TextArea
-        onChange={(e) => setEditedContent(e.target.value)}
-        value={changedContent}
-      />
-    </Styled.EditContent>
+    <TextArea
+      onChange={(e) => setEditedContent(e.target.value)}
+      value={changedContent}
+    />
   );
 };
-
-export default CardContent;
