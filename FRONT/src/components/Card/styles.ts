@@ -44,6 +44,7 @@ export const Content = styled.div`
   border: none;
   letter-spacing: 1px;
   word-break: break-all;
+  overflow: auto;
   color: ${(props) => props.theme["green-500"]};
   background: ${(props) => props.theme["gray-300"]};
 `;
