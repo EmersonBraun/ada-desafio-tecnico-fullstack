@@ -5,9 +5,9 @@
 ### Backend
 1 - enter in folder  
 `cd BACK/`  
-2 - copy .env.example  
-`cp .env.example .env`  
-3 - start docker  
+2 - copy .example.env  
+`cp .example.env .env`  
+3 - start docker
 `docker-compose up -d `  
 4 - get current version of node
 `nvm install 18`  
@@ -30,11 +30,13 @@
 - Run unit tests: `yarn run test:unit`
 - Run integration tests: `yarn run test:integration`
 
+[Insomnia Collection to test endpoints](./Insomnia_Collection.json)
+
 ### Frontend
 1 - enter in folder  
 `cd FRONT/`  
-2 - copy .env.example  
-`cp .env.example .env`  
+2 - copy .example.env  
+`cp .example.env .env`  
 3 - get current version of node
 `nvm install 18`  
 `nvm use`  
