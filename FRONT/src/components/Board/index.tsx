@@ -3,12 +3,12 @@ import { toast } from "react-toastify";
 import { MESSAGES, STATUS } from "../../constants";
 import { useCard } from "../../hooks/useCard";
 import { CardData, UpdateCardData } from "../../types";
-import Card from "../Card";
-import List from "../List";
-import NewCard from "../NewCard";
-import * as Styled from "./styles";
+import { Card } from "../Card";
+import { List } from "../List";
+import { NewCard } from "../NewCard";
+import { BoardContainer, Container } from "./styles";
 
-const Board = () => {
+export const Board = () => {
   const [cardList, setCardList] = useState<any>();
 
   const { getAllCard, createCard, updateCard, deleteCard } = useCard();
@@ -78,25 +78,25 @@ const Board = () => {
   };
 
   return (
-    <Styled.Container>
-      <List status="Nova Tarefa">
-        <NewCard onHandleAddCard={handleAddCard} />
-      </List>
-      {STATUS.map((status: string) => (
-        <List key={status} status={status}>
-          {!!cardList?.[status]?.length &&
-            cardList[status].map((card: UpdateCardData) => (
-              <Card
-                key={card.id}
-                data={card}
-                onHandleUpdate={handleUpdate}
-                onHandleDelete={handleDelete}
-              />
-            ))}
+    <BoardContainer>
+      <Container>
+        <List status="Nova Tarefa">
+          <NewCard onHandleAddCard={handleAddCard} />
         </List>
-      ))}
-    </Styled.Container>
+        {STATUS.map((status: string) => (
+          <List key={status} status={status}>
+            {!!cardList?.[status]?.length &&
+              cardList[status].map((card: UpdateCardData) => (
+                <Card
+                  key={card.id}
+                  data={card}
+                  onHandleUpdate={handleUpdate}
+                  onHandleDelete={handleDelete}
+                />
+              ))}
+          </List>
+        ))}
+      </Container>
+    </BoardContainer>
   );
 };
-
-export default Board;

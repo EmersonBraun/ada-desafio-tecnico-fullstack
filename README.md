@@ -12,12 +12,13 @@
 4 - get current version of node
 `nvm install 18`  
 `nvm use`  
-5 - install dependences  
+5 - install dependence  
 `yarn install `  
 6 - run application   
 `yarn run dev `
 
 #### Scripts
+
 - Run in Dev environment: `yarn run dev`  
 - Run in Prod environment: `yarn run prod`  
 - Run built application: `yarn run start`  
@@ -33,6 +34,7 @@
 [Insomnia Collection to test endpoints](./Insomnia_Collection.json)
 
 ### Frontend
+
 1 - enter in folder  
 `cd FRONT/`  
 2 - copy .example.env  
@@ -40,12 +42,13 @@
 3 - get current version of node
 `nvm install 18`  
 `nvm use`  
-4 - install dependences  
+4 - install dependence  
 `yarn install `  
 5 - run application   
 `yarn run dev `
 
 #### Scripts
+
 - Run in Dev environment: `yarn run dev`  
 - Run in Prod environment: `yarn run prod`  
 - Run built application: `yarn run start`  

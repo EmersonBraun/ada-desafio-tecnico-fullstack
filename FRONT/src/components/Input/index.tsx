@@ -1,4 +1,4 @@
-import * as Styled from "./styles";
+import { InputContainer } from "./styles";
 
 interface InputProps {
   type?: string;
@@ -7,8 +7,6 @@ interface InputProps {
   value: string;
 }
 
-const Input = (props: InputProps) => {
-  return <Styled.Input {...props} />;
-};
-
-export default Input;
+export default function Input(props: InputProps) {
+  return <InputContainer {...props} />;
+}

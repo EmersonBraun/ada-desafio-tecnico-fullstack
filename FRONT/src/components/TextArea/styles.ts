@@ -1,9 +1,13 @@
 import styled from "styled-components";
 
-const TextArea = styled.textarea`
-  width: 100%;
+export const TextAreaContainer = styled.textarea`
+  width: 98%;
+  height: 100px;
+  text-align: center;
   padding: 5px;
-  min-height: 100px;
+  border-radius: 8px;
+  border: none;
+  letter-spacing: 1px;
+  overflow: hidden;
+  background: ${(props) => props.theme["gray-300"]};
 `;
-
-export { TextArea };

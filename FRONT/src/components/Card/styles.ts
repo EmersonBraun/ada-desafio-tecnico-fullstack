@@ -1,59 +1,79 @@
 import styled from "styled-components";
 
-const Container = styled.li`
-  min-width: 200px;
-  padding: 10px;
-  list-style: none;
-  margin: 5px;
-  background-color: white;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  height: 15rem;
-`;
-
-const Header = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid silver;
-`;
-
-const Title = styled.h4`
-  flex-grow: 1;
-  text-align: center;
-  padding: 5px;
-`;
-
-const Content = styled.div`
-  margin-top: 10px;
-  margin-bottom: 10px;
-  min-height: 100px;
-`;
-
-const ButtonsContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  border-top: 1px solid silver;
-  padding: 8px;
-`;
-
-const EditContent = styled.div`
-  width: 100%;
+export const Container = styled.li`
   display: flex;
   flex-direction: column;
+  min-width: 200px;
+  max-width: 200px;
+  gap: 2px;
+  padding: 12px;
   align-items: center;
+  justify-content: center;
+  list-style: none;
+  border-radius: 8px;
+  background: ${(props) => props.theme["gray-700"]};
 `;
 
-const ClickableIcon = styled.span<{ disabled?: boolean }>`
+export const Header = styled.div`
+  display: flex;
+  width: 98%;
+  text-align: center;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 8px;
+  border: none;
+  letter-spacing: 1px;
+  background: ${(props) => props.theme["gray-300"]};
+`;
+
+export const Title = styled.h4`
+  flex: 1;
+  text-align: center;
+  padding: 6px;
+  overflow: hidden;
+
+  color: ${(props) => props.theme["green-700"]};
+`;
+
+export const Content = styled.div`
+  width: 98%;
+  height: 100px;
+  text-align: center;
+  padding: 5px;
+  border-radius: 8px;
+  border: none;
+  letter-spacing: 1px;
+  word-break: break-all;
+  color: ${(props) => props.theme["green-500"]};
+  background: ${(props) => props.theme["gray-300"]};
+`;
+
+export const ButtonsContainer = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin-top: 10px;
+  color: ${(props) => props.theme["green-500"]};
+`;
+
+export const ClickableIcon = styled.span<{ disabled?: boolean }>`
   cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
-`;
 
-export {
-  Container,
-  Header,
-  Title,
-  Content,
-  ButtonsContainer,
-  EditContent,
-  ClickableIcon,
-};
+  .FaTrashIcon,
+  .FaBanIcon {
+    color: ${(props) => props.theme["red-700"]};
+
+    &:hover {
+      color: ${(props) => props.theme["red-500"]};
+    }
+  }
+  .FaLeftIcon,
+  .FaRightIcon,
+  .FaSaveIcon {
+    color: ${(props) => props.theme["green-700"]};
+
+    &:hover {
+      color: ${(props) => props.theme["green-500"]};
+    }
+  }
+`;

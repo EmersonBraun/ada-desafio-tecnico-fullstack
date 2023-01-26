@@ -1,13 +1,11 @@
-import * as Styled from "./styles";
+import { TextAreaContainer } from "./styles";
 
 interface TextAreaProps {
-  onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
-  value: string;
+  onChange?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
+  value?: string;
   placeholder?: string;
 }
 
-const TextArea = (props: TextAreaProps) => {
-  return <Styled.TextArea {...props} />;
+export const TextArea = (props: TextAreaProps) => {
+  return <TextAreaContainer {...props} />;
 };
-
-export default TextArea;
