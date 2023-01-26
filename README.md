@@ -2,14 +2,20 @@
 
 ## Get started
 
+- Required Tools:
+  - [Docker](https://www.docker.com/) 
+  - [NVM](https://github.com/nvm-sh/nvm)
+  - [Yarn](https://yarnpkg.com/)
+
 ### Backend
 1 - enter in folder  
 `cd BACK/`  
 2 - copy .example.env  
 `cp .example.env .env`  
-3 - start docker
+3 - start docker  
+PS: Make sure you have docker and it's running: [documentation Docker](https://www.docker.com/)  
 `docker-compose up -d `  
-4 - get current version of node
+4 - get current version of node    
 `nvm install 18`  
 `nvm use`  
 5 - install dependence  
