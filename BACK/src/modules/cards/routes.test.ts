@@ -33,7 +33,7 @@ describe('#Cards - Integration', () => {
 
     describe('#create', () => {
         test('should return a created registry', async () => {
-            const response = await request.post('/cards').send(DEFAULT_DATA).set('Authorization', `Bearer ${token}`)
+            const response = await request.post('/cards').set('Authorization', `Bearer ${token}`).send(DEFAULT_DATA)
             expect(response.status).toBe(HTTP_CODES.CREATED)
             expect(response.body).toBeInstanceOf(Object)
         })
@@ -47,8 +47,8 @@ describe('#Cards - Integration', () => {
             const newValue = 'some new value'
             const response = await request
                 .put(`/cards/${id}`)
-                .send({ ...DEFAULT_DATA, titulo: newValue })
                 .set('Authorization', `Bearer ${token}`)
+                .send({ ...DEFAULT_DATA, titulo: newValue })
 
             expect(response.status).toBe(HTTP_CODES.OK)
             expect(response.body).toBeInstanceOf(Object)

@@ -21,7 +21,7 @@ describe('#authController', () => {
                 login: 'wrong',
                 password: 'wrong'
             } })
-            expect(response.statusCode).toBe(HTTP_CODES.BAD_REQUEST)
+            expect(response.statusCode).toBe(HTTP_CODES.UNAUTHORIZED)
             expect(response.body).toBeTruthy()
         })
     })

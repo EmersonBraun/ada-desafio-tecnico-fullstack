@@ -88,7 +88,7 @@ export const Card = ({ data, onHandleUpdate, onHandleDelete }: CardProps) => {
           <>
             <ClickableIcon
               disabled={!hasBackward}
-              onClick={() => onHandleUpdate(changeToBackwardList())}
+              onClick={() => hasBackward && onHandleUpdate(changeToBackwardList())}
             >
               <FaChevronCircleLeft className="FaLeftIcon" size={20} />
             </ClickableIcon>
@@ -97,7 +97,7 @@ export const Card = ({ data, onHandleUpdate, onHandleDelete }: CardProps) => {
             </ClickableIcon>
             <ClickableIcon
               disabled={!hasFoward}
-              onClick={() => onHandleUpdate(changeToNextList())}
+              onClick={() => hasFoward && onHandleUpdate(changeToNextList())}
             >
               <FaChevronCircleRight className="FaRightIcon" size={20} />
             </ClickableIcon>
