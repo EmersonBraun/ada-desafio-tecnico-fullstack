@@ -16,11 +16,11 @@ export const CardContent = ({
   changedContent,
 }: CardContentProps) => {
   return isDisplayMode ? (
-    <Content>
+    <Content data-testid="card-content">
       <ReactMarkdown>{conteudo}</ReactMarkdown>
     </Content>
   ) : (
-    <TextArea
+    <TextArea data-testid="card-content"
       onChange={(e) => setEditedContent(e.target.value)}
       value={changedContent}
     />

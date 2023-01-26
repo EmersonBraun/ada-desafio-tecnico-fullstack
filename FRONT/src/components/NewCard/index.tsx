@@ -3,7 +3,7 @@ import { FaPlusCircle } from "react-icons/fa";
 import { toast } from "react-toastify";
 import { MESSAGES, STATUS_LABELS } from "../../constants";
 import { CardData } from "../../types";
-import Input from "../Input";
+import { Input } from "../Input";
 import { TextArea } from "../TextArea";
 import { Container, ButtonsContainer, ClickableIcon } from "./styles";
 
@@ -35,7 +35,7 @@ export const NewCard = ({ onHandleAddCard }: NewCardProps) => {
   };
 
   return (
-    <Container>
+    <Container data-testid="new-card">
       <Input
         value={titulo}
         placeholder="Título"
