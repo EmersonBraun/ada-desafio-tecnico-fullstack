@@ -7,5 +7,5 @@ interface TextAreaProps {
 }
 
 export const TextArea = (props: TextAreaProps) => {
-  return <TextAreaContainer {...props} data-testid="text-area"/>;
+  return <TextAreaContainer {...props} data-testid="text-area" />;
 };

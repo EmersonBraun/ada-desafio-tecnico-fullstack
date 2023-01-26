@@ -27,7 +27,7 @@ describe('#authService', () => {
 
     describe('#verifyPassword', () => {
         test('should return a valid verification', async () => {
-            const { DEFAULT_LOGIN, DEFAULT_PASSWORD }: any = process.env;
+            const { DEFAULT_LOGIN, DEFAULT_PASSWORD }: any = process.env
             const credentialsIsValid = await verifyPassword(DEFAULT_PASSWORD, DEFAULT_LOGIN)
             expect(credentialsIsValid).toBeTruthy()
         })

@@ -1,10 +1,10 @@
-import { render, screen } from '@testing-library/react';
-import { List } from './';
+import { render, screen } from "@testing-library/react";
+import { List } from ".";
 
-describe('<List />', () => {
-  it('should display elements', () => {
+describe("<List />", () => {
+  it("should display elements", () => {
     render(<List status="any">test</List>);
-    
-    expect(screen.getByTestId('list')).toBeTruthy();
+
+    expect(screen.getByTestId("list")).toBeTruthy();
   });
 });

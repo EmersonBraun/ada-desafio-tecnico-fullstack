@@ -8,5 +8,5 @@ interface InputProps {
 }
 
 export const Input = (props: InputProps) => {
-  return <InputContainer {...props} data-testid="input"/>;
-}
+  return <InputContainer {...props} data-testid="input" />;
+};

@@ -26,7 +26,8 @@ export const CardHeader = ({
       </ClickableIcon>
     </>
   ) : (
-    <Input data-testid="card-header"
+    <Input
+      data-testid="card-header"
       type="text"
       onChange={(e) => setChangedTitle(e.target.value)}
       value={changedTitle}

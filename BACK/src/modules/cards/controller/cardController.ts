@@ -36,13 +36,13 @@ export async function updateCard({
 }: HttpRequest): Promise<HttpResponse> {
     const repository = new CardRepository()
     try {
-        console.info(`${getFormatedDate()} - Card ${params.id} - ${body.titulo} - Alterar`);
+        console.info(`${getFormatedDate()} - Card ${params.id} - ${body.titulo} - Alterar`)
         const findById = await repository.findById(params.id)
         if (!findById) {
             return notFound()
         }
         const response = await repository.update(params.id, body)
-        console.info(`${getFormatedDate()} - Card ${params.id} - ${body.titulo} - Alterado`);
+        console.info(`${getFormatedDate()} - Card ${params.id} - ${body.titulo} - Alterado`)
         return ok(response)
     } catch (error) {
         logger.error(error)
@@ -59,10 +59,10 @@ export async function deleteCard({
         if (!findById) {
             return notFound()
         }
-        console.info(`${getFormatedDate()} - Card ${params.id} - ${findById.titulo} - Remover`);
+        console.info(`${getFormatedDate()} - Card ${params.id} - ${findById.titulo} - Remover`)
         await repository.delete(params.id)
 
-        console.info(`${getFormatedDate()} - Card ${params.id} - ${findById.titulo} - Removido`);
+        console.info(`${getFormatedDate()} - Card ${params.id} - ${findById.titulo} - Removido`)
         const response = await repository.list()
         return ok(response)
     } catch (error) {

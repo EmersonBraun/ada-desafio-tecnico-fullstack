@@ -20,7 +20,8 @@ export const CardContent = ({
       <ReactMarkdown>{conteudo}</ReactMarkdown>
     </Content>
   ) : (
-    <TextArea data-testid="card-content"
+    <TextArea
+      data-testid="card-content"
       onChange={(e) => setEditedContent(e.target.value)}
       value={changedContent}
     />
