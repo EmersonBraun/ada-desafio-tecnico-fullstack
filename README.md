@@ -54,5 +54,4 @@
 - Run built application: `yarn run start`  
 - Run lint: `yarn run lint`
 - Run all tests: `yarn run test`
-- Run all tests (watch mode): `yarn run test:watch`
-- Run test coverage: `yarn run test:cov`
+

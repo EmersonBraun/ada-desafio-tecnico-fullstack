@@ -7,7 +7,7 @@ interface ListProps {
 
 export const List = ({ status, children }: ListProps) => {
   return (
-    <Container>
+    <Container data-testid="list">
       <Title>{status}</Title>
       <UL>{children}</UL>
     </Container>

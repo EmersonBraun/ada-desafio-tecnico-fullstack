@@ -67,7 +67,7 @@ export const Card = ({ data, onHandleUpdate, onHandleDelete }: CardProps) => {
   };
 
   return (
-    <Container>
+    <Container data-testid="card">
       <Header>
         <CardHeader
           isDisplayMode={isDisplayMode}

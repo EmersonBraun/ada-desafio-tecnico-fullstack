@@ -7,6 +7,6 @@ interface InputProps {
   value: string;
 }
 
-export default function Input(props: InputProps) {
-  return <InputContainer {...props} />;
+export const Input = (props: InputProps) => {
+  return <InputContainer {...props} data-testid="input"/>;
 }
