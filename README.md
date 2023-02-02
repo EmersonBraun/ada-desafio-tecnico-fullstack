@@ -1,5 +1,12 @@
 # ada-desafio-tecnico-fullstack
-
+<a href='https://github.com/shivamkapasia0' target="_blank"><img alt='express' src='https://img.shields.io/badge/express-100000?style=for-the-badge&logo=express&logoColor=white&labelColor=black&color=black'/></a>
+<a href='https://github.com/shivamkapasia0' target="_blank"><img alt='mongodb' src='https://img.shields.io/badge/mongodb-100000?style=for-the-badge&logo=mongodb&logoColor=white&labelColor=black&color=black'/></a>
+<a href='https://github.com/shivamkapasia0' target="_blank"><img alt='docker' src='https://img.shields.io/badge/docker-100000?style=for-the-badge&logo=docker&logoColor=white&labelColor=black&color=black'/></a>
+<a href='https://github.com/shivamkapasia0' target="_blank"><img alt='react' src='https://img.shields.io/badge/react-100000?style=for-the-badge&logo=react&logoColor=white&labelColor=black&color=black'/></a>
+<a href='https://github.com/shivamkapasia0' target="_blank"><img alt='jest' src='https://img.shields.io/badge/jest-100000?style=for-the-badge&logo=jest&logoColor=white&labelColor=black&color=black'/></a>
+<a href='https://github.com/shivamkapasia0' target="_blank"><img alt='yarn' src='https://img.shields.io/badge/yarn-100000?style=for-the-badge&logo=yarn&logoColor=white&labelColor=black&color=black'/></a>
+<a href='https://github.com/shivamkapasia0' target="_blank"><img alt='eslint' src='https://img.shields.io/badge/eslint-100000?style=for-the-badge&logo=eslint&logoColor=white&labelColor=black&color=black'/></a>
+<a href='https://github.com/shivamkapasia0' target="_blank"><img alt='typescript' src='https://img.shields.io/badge/typescript-100000?style=for-the-badge&logo=typescript&logoColor=white&labelColor=black&color=black'/></a>
 ## Get started
 
 - Required Tools:
